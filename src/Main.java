@@ -3,6 +3,8 @@ public class Main {
         stageOneTests();
         System.out.println();
         stageTwoTests();
+        System.out.println();
+        playGame();
     }
 
     public static void stageOneTests(){
@@ -29,5 +31,11 @@ public class Main {
         game = new CardGame();
         game.shuffleDeck();
         System.out.println(game.getDeck());
+    }
+
+    public static void playGame(){
+        Snap snapGame = new Snap();
+        System.out.println("PLAY GAME");
+        snapGame.playGame();
     }
 }
