@@ -18,5 +18,10 @@ public class Main {
         System.out.println("STAGE 2 TESTS");
         CardGame game = new CardGame();
         System.out.println(game.dealCard());
+        System.out.println();
+
+        game = new CardGame();
+        game.sortDeckInNumberOrder();
+        System.out.println(game.getDeck());
     }
 }

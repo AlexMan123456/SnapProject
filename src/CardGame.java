@@ -32,6 +32,10 @@ public class CardGame {
         return card;
     }
 
+    public void sortDeckInNumberOrder(){
+        this.deckOfCards.sort(Comparator.comparingInt(Card::getValue));
+    }
+
 
     // PRIVATE METHODS
     private String getCardSymbol(int value){
