@@ -11,6 +11,16 @@ public class Card {
     }
 
 
+    // GETTERS
+    public int getValue(){
+        return this.value;
+    }
+
+    public String getSuit(){
+        return this.suit;
+    }
+
+
     @Override
     public String toString() {
         return "Card{" +
