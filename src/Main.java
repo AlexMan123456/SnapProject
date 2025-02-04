@@ -23,7 +23,6 @@ public class Main {
         game.sortDeckInNumberOrder();
         System.out.println(game.getDeck());
 
-        game = new CardGame();
         game.sortDeckIntoSuits();
         System.out.println(game.getDeck());
 
