@@ -36,6 +36,10 @@ public class CardGame {
         this.deckOfCards.sort(Comparator.comparingInt(Card::getValue));
     }
 
+    public void sortDeckIntoSuits(){
+        this.deckOfCards.sort(Comparator.comparing(Card::getSuit));
+    }
+
 
     // PRIVATE METHODS
     private String getCardSymbol(int value){

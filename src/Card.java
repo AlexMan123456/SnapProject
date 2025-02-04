@@ -16,6 +16,10 @@ public class Card {
         return this.value;
     }
 
+    public String getSuit(){
+        return this.suit;
+    }
+
 
     @Override
     public String toString() {

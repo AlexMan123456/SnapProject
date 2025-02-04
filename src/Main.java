@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args){
         stageOneTests();
+        System.out.println();
         stageTwoTests();
     }
 
@@ -11,17 +12,19 @@ public class Main {
 
         CardGame game = new CardGame();
         System.out.println(game.getDeck());
-        System.out.println();
     }
 
     public static void stageTwoTests(){
         System.out.println("STAGE 2 TESTS");
         CardGame game = new CardGame();
         System.out.println(game.dealCard());
-        System.out.println();
 
         game = new CardGame();
         game.sortDeckInNumberOrder();
+        System.out.println(game.getDeck());
+
+        game = new CardGame();
+        game.sortDeckIntoSuits();
         System.out.println(game.getDeck());
     }
 }
