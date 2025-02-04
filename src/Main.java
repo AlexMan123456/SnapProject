@@ -26,5 +26,9 @@ public class Main {
         game = new CardGame();
         game.sortDeckIntoSuits();
         System.out.println(game.getDeck());
+
+        game = new CardGame();
+        game.shuffleDeck();
+        System.out.println(game.getDeck());
     }
 }

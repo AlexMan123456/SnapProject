@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class CardGame {
-    private final ArrayList<Card> deckOfCards = new ArrayList<>();
+    private ArrayList<Card> deckOfCards = new ArrayList<>();
 
     // CONSTRUCTOR
     public CardGame(){
@@ -26,7 +26,7 @@ public class CardGame {
 
     // OTHER PUBLIC METHODS
     public Card dealCard(){
-        int finalIndexOfDeck = deckOfCards.toArray().length-1;
+        int finalIndexOfDeck = this.deckOfCards.size()-1;
         Card card = this.deckOfCards.get(finalIndexOfDeck);
         this.deckOfCards.remove(finalIndexOfDeck);
         return card;
@@ -38,6 +38,17 @@ public class CardGame {
 
     public void sortDeckIntoSuits(){
         this.deckOfCards.sort(Comparator.comparing(Card::getSuit));
+    }
+
+    public void shuffleDeck(){
+        ArrayList<Card> newDeck = new ArrayList<>();
+        int startingDeckLength = this.deckOfCards.size();
+        for(int i=0; i<startingDeckLength; i++){
+            int indexToRemove = getRandomNumber(0,this.deckOfCards.size()-1);
+            newDeck.add(this.deckOfCards.get(indexToRemove));
+            this.deckOfCards.remove(indexToRemove);
+        }
+        this.deckOfCards = newDeck;
     }
 
 
@@ -53,5 +64,9 @@ public class CardGame {
             case 14 -> "A";
             default -> "";
         };
+    }
+
+    private int getRandomNumber(int start, int end){
+        return (int)(Math.random() * end + start);
     }
 }
