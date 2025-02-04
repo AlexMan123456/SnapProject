@@ -11,6 +11,12 @@ public class Card {
     }
 
 
+    // GETTERS
+    public int getValue(){
+        return this.value;
+    }
+
+
     @Override
     public String toString() {
         return "Card{" +

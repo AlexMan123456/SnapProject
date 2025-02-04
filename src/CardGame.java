@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class CardGame {
     private final ArrayList<Card> deckOfCards = new ArrayList<>();
@@ -22,6 +23,14 @@ public class CardGame {
         return this.deckOfCards;
     }
 
+
+    // OTHER PUBLIC METHODS
+    public Card dealCard(){
+        int finalIndexOfDeck = deckOfCards.toArray().length-1;
+        Card card = this.deckOfCards.get(finalIndexOfDeck);
+        this.deckOfCards.remove(finalIndexOfDeck);
+        return card;
+    }
 
 
     // PRIVATE METHODS
