@@ -16,4 +16,6 @@ Now navigate into this directory by typing:
 
 To play the game, run the Main class. Player one's card will initially first show. Press enter to then display player two's next card, then enter again to display player one's next card.
 
-Keep doing this, and eventually you'll find a match.
+Keep doing this until you either find a match or the game ends.
+- If you find a match on your turn, type 'snap' into the console to win the game.
+- If you don't find a match and the game ends, a message will display to notify you that no match has been found and that there is no winner.
