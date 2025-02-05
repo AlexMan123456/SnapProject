@@ -32,6 +32,9 @@ public class Snap extends CardGame {
             previousCard = currentCard;
             currentPlayer = (new int[]{1,0})[currentPlayer];
         } while(this.getDeck().size() > 0);
+        if(this.getDeck().size() == 0){
+            System.out.println("No match found in deck. No winner.");
+        }
         System.out.println("Game ending...");
     }
 }
