@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Snap extends CardGame {
-    Player[] players;
-    int currentPlayer;
+    private Player[] players;
+    private int currentPlayer;
 
     public Snap(){
         super();
